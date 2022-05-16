@@ -109,7 +109,9 @@ function cells(){
 }
 
 function postCellType($type){
-    cont(dd[0][0]);
+    if (dd !== "undefined"){
+        cont(dd[0][0]);
+    }
     $.post("index.php",{"hiddenmode" : 1, "request" : "getcellcontent", "celltype" : $type},function(data){
         cellsContent(data);
     })
@@ -128,8 +130,3 @@ function cellsContent(ddata){
     }
 }
 
-function selection(){
-    if(document.getElementById('radio'+dd[i][0]).checked){
-
-    }
-}
