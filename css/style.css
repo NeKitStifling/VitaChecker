@@ -1,0 +1,60 @@
+/*main*/
+    body{
+        background-color: #222629;
+        color:white;
+    }
+
+    .nikTheGreat{
+        width:300px;
+    }
+
+    a:link{
+        color:white;
+    }
+    a:visited {
+        color: white;
+    }
+    a:hover {
+        color: #86C232;
+    }
+
+    .content{
+        width:500px;
+        height:500px;
+        display: table;
+    }
+
+    .mainCell{
+        width:100px;
+        height:100px;
+        background-color: #222629;
+        border-width: 2px;
+        border-color: #474B4F;
+        border-style:outset;
+        margin:10px;
+        text-align: center;
+    }
+    .mainCell:hover{
+        border-color: #86C232;
+    }
+
+    .cellLink{
+        -webkit-appearance: button;
+        -moz-appearance: button;
+        appearance: button;
+        text-decoration: none;
+        color: initial;
+    }
+
+    .cellImg{
+        width:70px;
+    }
+/*header*/
+    .navbar{
+        display: flex;
+    }
+
+/*maintable*/
+    #grnum, #portnum, #numnum{
+        display: none;
+    }
