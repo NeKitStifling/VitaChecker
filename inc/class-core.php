@@ -68,17 +68,62 @@ class core
 			if ($cellType == "meat"){
 				$pageobj = new cellMeat ($this->dbcon);
 			}
+			elseif ($cellType == "fish"){
+				$pageobj = new cellFish ($this->dbcon);
+			}
+			elseif ($cellType == "vegetables"){
+				$pageobj = new cellVegetables ($this->dbcon);
+			}
+			elseif ($cellType == "fruits"){
+				$pageobj = new cellFruits ($this->dbcon);
+			}
+			elseif ($cellType == "grains"){
+				$pageobj = new cellGrains ($this->dbcon);
+			}
+			elseif ($cellType == "beans"){
+				$pageobj = new cellBeans ($this->dbcon);
+			}
+			elseif ($cellType == "nuts"){
+				$pageobj = new cellNuts ($this->dbcon);
+			}
+			elseif ($cellType == "poultry"){
+				$pageobj = new cellPoultry ($this->dbcon);
+			}
+			elseif ($cellType == "seafood"){
+				$pageobj = new cellSeafood ($this->dbcon);
+			}
+			elseif ($cellType == "dairy"){
+				$pageobj = new cellDairy ($this->dbcon);
+			}
+			elseif ($cellType == "beverages"){
+				$pageobj = new cellBeverages ($this->dbcon);
+			}
+			elseif ($cellType == "alcohol"){
+				$pageobj = new cellAlcohol ($this->dbcon);
+			}
+			elseif ($cellType == "complex"){
+				$pageobj = new cellComplex ($this->dbcon);
+			}
+			elseif ($cellType == "sweets"){
+				$pageobj = new cellSweets ($this->dbcon);
+			}
+			elseif ($cellType == "bakery"){
+				$pageobj = new cellBakery ($this->dbcon);
+			}
 			$getlist = $pageobj->getlistBy(["vis"=>1]);
 			$dat = [];
 			foreach($getlist as $key=>$item){
 				$pageobj->select($item["id"]);
 				$dat[] = [$item["id"],
+				$pageobj->getinfo("img"),
 				$pageobj->getinfo("name"),
 				$pageobj->getinfo("fat"),
 				$pageobj->getinfo("protein"),
 				$pageobj->getinfo("carbohydrates"),
+				$pageobj->getinfo("water"),
 				$pageobj->getinfo("A1"),
-				$pageobj->getinfo("А2"),
+				$pageobj->getinfo("bCarotene"),
+				$pageobj->getinfo("aCarotene"),
 				$pageobj->getinfo("B1"),
 				$pageobj->getinfo("B2"),
 				$pageobj->getinfo("B3"),
@@ -97,14 +142,11 @@ class core
 				$pageobj->getinfo("D1"),
 				$pageobj->getinfo("D2"),
 				$pageobj->getinfo("D3"),
-				$pageobj->getinfo("D4"),
-				$pageobj->getinfo("D5"),
 				$pageobj->getinfo("E"),
 				$pageobj->getinfo("K1"),
 				$pageobj->getinfo("K2"),
 				$pageobj->getinfo("N"),
 				$pageobj->getinfo("P"),
-				$pageobj->getinfo("U"),
 				$pageobj->getinfo("Zn"),
 				$pageobj->getinfo("Fe"),
 				$pageobj->getinfo("Ca"),
@@ -116,7 +158,8 @@ class core
 				$pageobj->getinfo("I"),
 				$pageobj->getinfo("Mo"),
 				$pageobj->getinfo("K"),
-				$pageobj->getinfo("Na")];
+				$pageobj->getinfo("Na"),
+				$pageobj->getinfo("F")];
 			}
 			print(json_encode($dat));
 		}
@@ -144,7 +187,5 @@ class core
 		$tmpl = file_get_contents("tmpl/page.html");
 		print ($tmpl);
 	}
-
-
 }
 

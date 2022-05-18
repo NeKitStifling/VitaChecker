@@ -121,12 +121,49 @@ function cellsContent(ddata){
     dd = jQuery.parseJSON(ddata);
     for(i = 0; i<dd.length; i++)
     {
-        $(".content").append($("<div class='typeOption"+dd[i][0]+"' id='typeOption"+dd[i][0]+"'></div><hr>"));
-        $(".typeOption"+dd[i][0]).append($("<br><input type='radio' id='radio"+dd[i][0]+"'><label>"
-                                +dd[i][1]
-                                +"</label><select id='selectAmount'><option>Choose amount in...</option><option value='1'>Grams</option><option value='2'>Portions</option><option value='3'>Numbers</option></select>"+
-                                +"<input type='number' id='grnum' value='1'><input type='number' id='portnum' value='2'><input type='number' id='numnum' value='3'>"
-                                +"<select id='selectCondition'></select>"));
+        $(".content").append($("<div class='typeOption"+dd[i][0]+" typeOption' id='typeOption"+dd[i][0]+"'></div><hr>"));
+        $(".typeOption"+dd[i][0]).append($("<a href='#' class='typeChoose' id='"+dd[i][0]+"'><div class='typeChooseContainer'><img src='"+dd[i][1]+"' class='optionIMG'><h1 class='chooseLabel'>"+dd[i][2]+"</h1></div></a>"));
+        $(".typeOption"+dd[i][0]).append($("<div class='chosenType chosenType"+dd[i][0]+"' id='chosenType"+dd[i][0]+"'></div>"));
+        vitaDraw();
     }
+    selection();
 }
 
+function selection(){
+    $('.typeChoose').click(function(){
+        var id = $(this).attr('id');
+        const targetDiv = document.getElementById("chosenType"+id);
+        if (targetDiv.style.display !== "block") {
+            targetDiv.style.display = "block";
+        } else {
+            targetDiv.style.display = "none";
+        }
+    });
+}
+
+function vitaDraw(){
+    $(".chosenType"+dd[i][0]).append($("<input type='number' id='inputGrams' min='0' max='3000'><button class='inputBtn'>Input</button><label> : Number of grams consumed</label><table class='chosenTable"+dd[i][0]+"'><thead><tr><td>Name</td><td>Value in grams</td></tr></thead><tbody class='chosenTableBody"+dd[i][0]+"'></tbody></table>"));
+
+    document.querySelector('.inputBtn').onclick = () =>{
+        let grValue = document.querySelector('.inputGrams').value
+        console.log(grValue);
+    }
+    grValue = document.getElementById('inputGrams').value / 100;
+
+    for(j = 0; j<optionNames.length; j++)
+    {
+        $(".chosenTableBody"+dd[i][0]).append($("<tr><td>"+optionNames[j]+"</td><td>"+(dd[i][j+3]*grValue)+"</td><td>"+toPercent((dd[i][j+3]*grValue)/dailyNorm[j])+"</td></tr>"));
+    };
+}
+
+const optionNames = ['Fat','Protein','Carbohydrates','Water','A1','bCarotene','aCarotene','B1','B2','B3','B4','B5','B6','B7','B8',
+                        'B9','B10','B11','B12','B13','B15','C','D1','D2','D3','E','K1','K2','N','P','Zn','Fe','Ca','Mg','Cu','Mn','Cr','Se','I','Mo','K','Na','F'];
+
+const dailyNorm = [84000,75000,310000,2000000,0.9,5,5,1.2,1.3,16,500,5,1.3,0.03,1000,
+0.4,100,100,0.0024,65,2,90,0.015,0.0075,0.01625,14.6,0.12,0.2,400,700,11,10,1000,400,0.9,2.3,0.05,0.055,0.2,0.1,4700,1300,4];
+
+function toPercent(point){
+    var percent = Number(point*100).toFixed(1);
+    percent+="%";
+    return percent;
+}
