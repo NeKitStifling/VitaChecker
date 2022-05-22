@@ -142,13 +142,9 @@ function selection(){
 }
 
 function vitaDraw(){
-    $(".chosenType"+dd[i][0]).append($("<input type='number' id='inputGrams' min='0' max='3000'><button class='inputBtn'>Input</button><label> : Number of grams consumed</label><table class='chosenTable"+dd[i][0]+"'><thead><tr><td>Name</td><td>Value in grams</td></tr></thead><tbody class='chosenTableBody"+dd[i][0]+"'></tbody></table>"));
+    $(".chosenType"+dd[i][0]).append($("<input type='number' id='inputGrams"+dd[i][0]+"' min='0' max='3000' value='100'><button class='inputBtn'>Input</button><label> : Number of grams consumed</label><table class='chosenTable"+dd[i][0]+"'><thead><tr><td>Name</td><td>Value in grams</td></tr></thead><tbody class='chosenTableBody"+dd[i][0]+"'></tbody></table>"));
 
-    document.querySelector('.inputBtn').onclick = () =>{
-        let grValue = document.querySelector('.inputGrams').value
-        console.log(grValue);
-    }
-    grValue = document.getElementById('inputGrams').value / 100;
+    grValue = document.getElementById('inputGrams'+dd[i][0]).value / 100;
 
     for(j = 0; j<optionNames.length; j++)
     {

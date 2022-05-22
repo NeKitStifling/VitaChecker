@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Апр 25 2022 г., 04:41
+-- Время создания: Май 22 2022 г., 16:51
 -- Версия сервера: 10.3.13-MariaDB-log
 -- Версия PHP: 7.1.32
 
@@ -49,6 +49,557 @@ INSERT INTO `about` (`id`, `vis`, `del`, `type`, `text`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `alcohol`
+--
+
+CREATE TABLE `alcohol` (
+  `id` int(30) NOT NULL,
+  `vis` int(1) NOT NULL DEFAULT 1,
+  `del` int(1) NOT NULL DEFAULT 0,
+  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fat` float NOT NULL DEFAULT 0,
+  `protein` float NOT NULL DEFAULT 0,
+  `carbohydrates` float NOT NULL DEFAULT 0,
+  `water` float NOT NULL DEFAULT 0,
+  `A1` float NOT NULL DEFAULT 0,
+  `bCarotene` float NOT NULL DEFAULT 0,
+  `aCarotene` float NOT NULL DEFAULT 0,
+  `B1` float NOT NULL DEFAULT 0,
+  `B2` float NOT NULL DEFAULT 0,
+  `B3` float NOT NULL DEFAULT 0,
+  `B5` float NOT NULL DEFAULT 0,
+  `B6` float NOT NULL DEFAULT 0,
+  `B7` float NOT NULL DEFAULT 0,
+  `B9` float NOT NULL DEFAULT 0,
+  `B12` float NOT NULL DEFAULT 0,
+  `C` float NOT NULL DEFAULT 0,
+  `D1` float NOT NULL DEFAULT 0,
+  `D2` float NOT NULL DEFAULT 0,
+  `D3` float NOT NULL DEFAULT 0,
+  `D4` float NOT NULL DEFAULT 0,
+  `D5` float NOT NULL DEFAULT 0,
+  `E` float NOT NULL DEFAULT 0,
+  `K1` float NOT NULL DEFAULT 0,
+  `K2` float NOT NULL DEFAULT 0,
+  `B4` float NOT NULL DEFAULT 0,
+  `B8` float NOT NULL DEFAULT 0,
+  `B10` float NOT NULL DEFAULT 0,
+  `B11` float NOT NULL DEFAULT 0,
+  `B13` float NOT NULL DEFAULT 0,
+  `B15` float NOT NULL DEFAULT 0,
+  `N` float NOT NULL DEFAULT 0,
+  `P` float NOT NULL DEFAULT 0,
+  `U` float NOT NULL DEFAULT 0,
+  `Zn` float NOT NULL DEFAULT 0,
+  `Fe` float NOT NULL DEFAULT 0,
+  `Ca` float NOT NULL DEFAULT 0,
+  `Mg` float NOT NULL DEFAULT 0,
+  `Cu` float NOT NULL DEFAULT 0,
+  `Mn` float NOT NULL DEFAULT 0,
+  `Cr` float NOT NULL DEFAULT 0,
+  `Se` float NOT NULL DEFAULT 0,
+  `I` float NOT NULL DEFAULT 0,
+  `Mo` float NOT NULL DEFAULT 0,
+  `K` float NOT NULL DEFAULT 0,
+  `Na` float NOT NULL DEFAULT 0,
+  `F` float NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `bakery`
+--
+
+CREATE TABLE `bakery` (
+  `id` int(30) NOT NULL,
+  `vis` int(1) NOT NULL DEFAULT 1,
+  `del` int(1) NOT NULL DEFAULT 0,
+  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fat` float NOT NULL DEFAULT 0,
+  `protein` float NOT NULL DEFAULT 0,
+  `carbohydrates` float NOT NULL DEFAULT 0,
+  `water` float NOT NULL DEFAULT 0,
+  `A1` float NOT NULL DEFAULT 0,
+  `bCarotene` float NOT NULL DEFAULT 0,
+  `aCarotene` float NOT NULL DEFAULT 0,
+  `B1` float NOT NULL DEFAULT 0,
+  `B2` float NOT NULL DEFAULT 0,
+  `B3` float NOT NULL DEFAULT 0,
+  `B5` float NOT NULL DEFAULT 0,
+  `B6` float NOT NULL DEFAULT 0,
+  `B7` float NOT NULL DEFAULT 0,
+  `B9` float NOT NULL DEFAULT 0,
+  `B12` float NOT NULL DEFAULT 0,
+  `C` float NOT NULL DEFAULT 0,
+  `D1` float NOT NULL DEFAULT 0,
+  `D2` float NOT NULL DEFAULT 0,
+  `D3` float NOT NULL DEFAULT 0,
+  `D4` float NOT NULL DEFAULT 0,
+  `D5` float NOT NULL DEFAULT 0,
+  `E` float NOT NULL DEFAULT 0,
+  `K1` float NOT NULL DEFAULT 0,
+  `K2` float NOT NULL DEFAULT 0,
+  `B4` float NOT NULL DEFAULT 0,
+  `B8` float NOT NULL DEFAULT 0,
+  `B10` float NOT NULL DEFAULT 0,
+  `B11` float NOT NULL DEFAULT 0,
+  `B13` float NOT NULL DEFAULT 0,
+  `B15` float NOT NULL DEFAULT 0,
+  `N` float NOT NULL DEFAULT 0,
+  `P` float NOT NULL DEFAULT 0,
+  `U` float NOT NULL DEFAULT 0,
+  `Zn` float NOT NULL DEFAULT 0,
+  `Fe` float NOT NULL DEFAULT 0,
+  `Ca` float NOT NULL DEFAULT 0,
+  `Mg` float NOT NULL DEFAULT 0,
+  `Cu` float NOT NULL DEFAULT 0,
+  `Mn` float NOT NULL DEFAULT 0,
+  `Cr` float NOT NULL DEFAULT 0,
+  `Se` float NOT NULL DEFAULT 0,
+  `I` float NOT NULL DEFAULT 0,
+  `Mo` float NOT NULL DEFAULT 0,
+  `K` float NOT NULL DEFAULT 0,
+  `Na` float NOT NULL DEFAULT 0,
+  `F` float NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `beans`
+--
+
+CREATE TABLE `beans` (
+  `id` int(30) NOT NULL,
+  `vis` int(1) NOT NULL DEFAULT 1,
+  `del` int(1) NOT NULL DEFAULT 0,
+  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fat` float NOT NULL DEFAULT 0,
+  `protein` float NOT NULL DEFAULT 0,
+  `carbohydrates` float NOT NULL DEFAULT 0,
+  `water` float NOT NULL DEFAULT 0,
+  `A1` float NOT NULL DEFAULT 0,
+  `bCarotene` float NOT NULL DEFAULT 0,
+  `aCarotene` float NOT NULL DEFAULT 0,
+  `B1` float NOT NULL DEFAULT 0,
+  `B2` float NOT NULL DEFAULT 0,
+  `B3` float NOT NULL DEFAULT 0,
+  `B5` float NOT NULL DEFAULT 0,
+  `B6` float NOT NULL DEFAULT 0,
+  `B7` float NOT NULL DEFAULT 0,
+  `B9` float NOT NULL DEFAULT 0,
+  `B12` float NOT NULL DEFAULT 0,
+  `C` float NOT NULL DEFAULT 0,
+  `D1` float NOT NULL DEFAULT 0,
+  `D2` float NOT NULL DEFAULT 0,
+  `D3` float NOT NULL DEFAULT 0,
+  `D4` float NOT NULL DEFAULT 0,
+  `D5` float NOT NULL DEFAULT 0,
+  `E` float NOT NULL DEFAULT 0,
+  `K1` float NOT NULL DEFAULT 0,
+  `K2` float NOT NULL DEFAULT 0,
+  `B4` float NOT NULL DEFAULT 0,
+  `B8` float NOT NULL DEFAULT 0,
+  `B10` float NOT NULL DEFAULT 0,
+  `B11` float NOT NULL DEFAULT 0,
+  `B13` float NOT NULL DEFAULT 0,
+  `B15` float NOT NULL DEFAULT 0,
+  `N` float NOT NULL DEFAULT 0,
+  `P` float NOT NULL DEFAULT 0,
+  `U` float NOT NULL DEFAULT 0,
+  `Zn` float NOT NULL DEFAULT 0,
+  `Fe` float NOT NULL DEFAULT 0,
+  `Ca` float NOT NULL DEFAULT 0,
+  `Mg` float NOT NULL DEFAULT 0,
+  `Cu` float NOT NULL DEFAULT 0,
+  `Mn` float NOT NULL DEFAULT 0,
+  `Cr` float NOT NULL DEFAULT 0,
+  `Se` float NOT NULL DEFAULT 0,
+  `I` float NOT NULL DEFAULT 0,
+  `Mo` float NOT NULL DEFAULT 0,
+  `K` float NOT NULL DEFAULT 0,
+  `Na` float NOT NULL DEFAULT 0,
+  `F` float NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `beverages`
+--
+
+CREATE TABLE `beverages` (
+  `id` int(30) NOT NULL,
+  `vis` int(1) NOT NULL DEFAULT 1,
+  `del` int(1) NOT NULL DEFAULT 0,
+  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fat` float NOT NULL DEFAULT 0,
+  `protein` float NOT NULL DEFAULT 0,
+  `carbohydrates` float NOT NULL DEFAULT 0,
+  `water` float NOT NULL DEFAULT 0,
+  `A1` float NOT NULL DEFAULT 0,
+  `bCarotene` float NOT NULL DEFAULT 0,
+  `aCarotene` float NOT NULL DEFAULT 0,
+  `B1` float NOT NULL DEFAULT 0,
+  `B2` float NOT NULL DEFAULT 0,
+  `B3` float NOT NULL DEFAULT 0,
+  `B5` float NOT NULL DEFAULT 0,
+  `B6` float NOT NULL DEFAULT 0,
+  `B7` float NOT NULL DEFAULT 0,
+  `B9` float NOT NULL DEFAULT 0,
+  `B12` float NOT NULL DEFAULT 0,
+  `C` float NOT NULL DEFAULT 0,
+  `D1` float NOT NULL DEFAULT 0,
+  `D2` float NOT NULL DEFAULT 0,
+  `D3` float NOT NULL DEFAULT 0,
+  `D4` float NOT NULL DEFAULT 0,
+  `D5` float NOT NULL DEFAULT 0,
+  `E` float NOT NULL DEFAULT 0,
+  `K1` float NOT NULL DEFAULT 0,
+  `K2` float NOT NULL DEFAULT 0,
+  `B4` float NOT NULL DEFAULT 0,
+  `B8` float NOT NULL DEFAULT 0,
+  `B10` float NOT NULL DEFAULT 0,
+  `B11` float NOT NULL DEFAULT 0,
+  `B13` float NOT NULL DEFAULT 0,
+  `B15` float NOT NULL DEFAULT 0,
+  `N` float NOT NULL DEFAULT 0,
+  `P` float NOT NULL DEFAULT 0,
+  `U` float NOT NULL DEFAULT 0,
+  `Zn` float NOT NULL DEFAULT 0,
+  `Fe` float NOT NULL DEFAULT 0,
+  `Ca` float NOT NULL DEFAULT 0,
+  `Mg` float NOT NULL DEFAULT 0,
+  `Cu` float NOT NULL DEFAULT 0,
+  `Mn` float NOT NULL DEFAULT 0,
+  `Cr` float NOT NULL DEFAULT 0,
+  `Se` float NOT NULL DEFAULT 0,
+  `I` float NOT NULL DEFAULT 0,
+  `Mo` float NOT NULL DEFAULT 0,
+  `K` float NOT NULL DEFAULT 0,
+  `Na` float NOT NULL DEFAULT 0,
+  `F` float NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `complex`
+--
+
+CREATE TABLE `complex` (
+  `id` int(30) NOT NULL,
+  `vis` int(1) NOT NULL DEFAULT 1,
+  `del` int(1) NOT NULL DEFAULT 0,
+  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fat` float NOT NULL DEFAULT 0,
+  `protein` float NOT NULL DEFAULT 0,
+  `carbohydrates` float NOT NULL DEFAULT 0,
+  `water` float NOT NULL DEFAULT 0,
+  `A1` float NOT NULL DEFAULT 0,
+  `bCarotene` float NOT NULL DEFAULT 0,
+  `aCarotene` float NOT NULL DEFAULT 0,
+  `B1` float NOT NULL DEFAULT 0,
+  `B2` float NOT NULL DEFAULT 0,
+  `B3` float NOT NULL DEFAULT 0,
+  `B5` float NOT NULL DEFAULT 0,
+  `B6` float NOT NULL DEFAULT 0,
+  `B7` float NOT NULL DEFAULT 0,
+  `B9` float NOT NULL DEFAULT 0,
+  `B12` float NOT NULL DEFAULT 0,
+  `C` float NOT NULL DEFAULT 0,
+  `D1` float NOT NULL DEFAULT 0,
+  `D2` float NOT NULL DEFAULT 0,
+  `D3` float NOT NULL DEFAULT 0,
+  `D4` float NOT NULL DEFAULT 0,
+  `D5` float NOT NULL DEFAULT 0,
+  `E` float NOT NULL DEFAULT 0,
+  `K1` float NOT NULL DEFAULT 0,
+  `K2` float NOT NULL DEFAULT 0,
+  `B4` float NOT NULL DEFAULT 0,
+  `B8` float NOT NULL DEFAULT 0,
+  `B10` float NOT NULL DEFAULT 0,
+  `B11` float NOT NULL DEFAULT 0,
+  `B13` float NOT NULL DEFAULT 0,
+  `B15` float NOT NULL DEFAULT 0,
+  `N` float NOT NULL DEFAULT 0,
+  `P` float NOT NULL DEFAULT 0,
+  `U` float NOT NULL DEFAULT 0,
+  `Zn` float NOT NULL DEFAULT 0,
+  `Fe` float NOT NULL DEFAULT 0,
+  `Ca` float NOT NULL DEFAULT 0,
+  `Mg` float NOT NULL DEFAULT 0,
+  `Cu` float NOT NULL DEFAULT 0,
+  `Mn` float NOT NULL DEFAULT 0,
+  `Cr` float NOT NULL DEFAULT 0,
+  `Se` float NOT NULL DEFAULT 0,
+  `I` float NOT NULL DEFAULT 0,
+  `Mo` float NOT NULL DEFAULT 0,
+  `K` float NOT NULL DEFAULT 0,
+  `Na` float NOT NULL DEFAULT 0,
+  `F` float NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `dairy`
+--
+
+CREATE TABLE `dairy` (
+  `id` int(30) NOT NULL,
+  `vis` int(1) NOT NULL DEFAULT 1,
+  `del` int(1) NOT NULL DEFAULT 0,
+  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fat` float NOT NULL DEFAULT 0,
+  `protein` float NOT NULL DEFAULT 0,
+  `carbohydrates` float NOT NULL DEFAULT 0,
+  `water` float NOT NULL DEFAULT 0,
+  `A1` float NOT NULL DEFAULT 0,
+  `bCarotene` float NOT NULL DEFAULT 0,
+  `aCarotene` float NOT NULL DEFAULT 0,
+  `B1` float NOT NULL DEFAULT 0,
+  `B2` float NOT NULL DEFAULT 0,
+  `B3` float NOT NULL DEFAULT 0,
+  `B5` float NOT NULL DEFAULT 0,
+  `B6` float NOT NULL DEFAULT 0,
+  `B7` float NOT NULL DEFAULT 0,
+  `B9` float NOT NULL DEFAULT 0,
+  `B12` float NOT NULL DEFAULT 0,
+  `C` float NOT NULL DEFAULT 0,
+  `D1` float NOT NULL DEFAULT 0,
+  `D2` float NOT NULL DEFAULT 0,
+  `D3` float NOT NULL DEFAULT 0,
+  `D4` float NOT NULL DEFAULT 0,
+  `D5` float NOT NULL DEFAULT 0,
+  `E` float NOT NULL DEFAULT 0,
+  `K1` float NOT NULL DEFAULT 0,
+  `K2` float NOT NULL DEFAULT 0,
+  `B4` float NOT NULL DEFAULT 0,
+  `B8` float NOT NULL DEFAULT 0,
+  `B10` float NOT NULL DEFAULT 0,
+  `B11` float NOT NULL DEFAULT 0,
+  `B13` float NOT NULL DEFAULT 0,
+  `B15` float NOT NULL DEFAULT 0,
+  `N` float NOT NULL DEFAULT 0,
+  `P` float NOT NULL DEFAULT 0,
+  `U` float NOT NULL DEFAULT 0,
+  `Zn` float NOT NULL DEFAULT 0,
+  `Fe` float NOT NULL DEFAULT 0,
+  `Ca` float NOT NULL DEFAULT 0,
+  `Mg` float NOT NULL DEFAULT 0,
+  `Cu` float NOT NULL DEFAULT 0,
+  `Mn` float NOT NULL DEFAULT 0,
+  `Cr` float NOT NULL DEFAULT 0,
+  `Se` float NOT NULL DEFAULT 0,
+  `I` float NOT NULL DEFAULT 0,
+  `Mo` float NOT NULL DEFAULT 0,
+  `K` float NOT NULL DEFAULT 0,
+  `Na` float NOT NULL DEFAULT 0,
+  `F` float NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `fish`
+--
+
+CREATE TABLE `fish` (
+  `id` int(30) NOT NULL,
+  `vis` int(1) NOT NULL DEFAULT 1,
+  `del` int(1) NOT NULL DEFAULT 0,
+  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fat` float NOT NULL DEFAULT 0,
+  `protein` float NOT NULL DEFAULT 0,
+  `carbohydrates` float NOT NULL DEFAULT 0,
+  `water` float NOT NULL DEFAULT 0,
+  `A1` float NOT NULL DEFAULT 0,
+  `bCarotene` float NOT NULL DEFAULT 0,
+  `aCarotene` float NOT NULL DEFAULT 0,
+  `B1` float NOT NULL DEFAULT 0,
+  `B2` float NOT NULL DEFAULT 0,
+  `B3` float NOT NULL DEFAULT 0,
+  `B5` float NOT NULL DEFAULT 0,
+  `B6` float NOT NULL DEFAULT 0,
+  `B7` float NOT NULL DEFAULT 0,
+  `B9` float NOT NULL DEFAULT 0,
+  `B12` float NOT NULL DEFAULT 0,
+  `C` float NOT NULL DEFAULT 0,
+  `D1` float NOT NULL DEFAULT 0,
+  `D2` float NOT NULL DEFAULT 0,
+  `D3` float NOT NULL DEFAULT 0,
+  `D4` float NOT NULL DEFAULT 0,
+  `D5` float NOT NULL DEFAULT 0,
+  `E` float NOT NULL DEFAULT 0,
+  `K1` float NOT NULL DEFAULT 0,
+  `K2` float NOT NULL DEFAULT 0,
+  `B4` float NOT NULL DEFAULT 0,
+  `B8` float NOT NULL DEFAULT 0,
+  `B10` float NOT NULL DEFAULT 0,
+  `B11` float NOT NULL DEFAULT 0,
+  `B13` float NOT NULL DEFAULT 0,
+  `B15` float NOT NULL DEFAULT 0,
+  `N` float NOT NULL DEFAULT 0,
+  `P` float NOT NULL DEFAULT 0,
+  `U` float NOT NULL DEFAULT 0,
+  `Zn` float NOT NULL DEFAULT 0,
+  `Fe` float NOT NULL DEFAULT 0,
+  `Ca` float NOT NULL DEFAULT 0,
+  `Mg` float NOT NULL DEFAULT 0,
+  `Cu` float NOT NULL DEFAULT 0,
+  `Mn` float NOT NULL DEFAULT 0,
+  `Cr` float NOT NULL DEFAULT 0,
+  `Se` float NOT NULL DEFAULT 0,
+  `I` float NOT NULL DEFAULT 0,
+  `Mo` float NOT NULL DEFAULT 0,
+  `K` float NOT NULL DEFAULT 0,
+  `Na` float NOT NULL DEFAULT 0,
+  `F` float NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `fruits`
+--
+
+CREATE TABLE `fruits` (
+  `id` int(30) NOT NULL,
+  `vis` int(1) NOT NULL DEFAULT 1,
+  `del` int(1) NOT NULL DEFAULT 0,
+  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fat` float NOT NULL DEFAULT 0,
+  `protein` float NOT NULL DEFAULT 0,
+  `carbohydrates` float NOT NULL DEFAULT 0,
+  `water` float NOT NULL DEFAULT 0,
+  `A1` float NOT NULL DEFAULT 0,
+  `bCarotene` float NOT NULL DEFAULT 0,
+  `aCarotene` float NOT NULL DEFAULT 0,
+  `B1` float NOT NULL DEFAULT 0,
+  `B2` float NOT NULL DEFAULT 0,
+  `B3` float NOT NULL DEFAULT 0,
+  `B5` float NOT NULL DEFAULT 0,
+  `B6` float NOT NULL DEFAULT 0,
+  `B7` float NOT NULL DEFAULT 0,
+  `B9` float NOT NULL DEFAULT 0,
+  `B12` float NOT NULL DEFAULT 0,
+  `C` float NOT NULL DEFAULT 0,
+  `D1` float NOT NULL DEFAULT 0,
+  `D2` float NOT NULL DEFAULT 0,
+  `D3` float NOT NULL DEFAULT 0,
+  `D4` float NOT NULL DEFAULT 0,
+  `D5` float NOT NULL DEFAULT 0,
+  `E` float NOT NULL DEFAULT 0,
+  `K1` float NOT NULL DEFAULT 0,
+  `K2` float NOT NULL DEFAULT 0,
+  `B4` float NOT NULL DEFAULT 0,
+  `B8` float NOT NULL DEFAULT 0,
+  `B10` float NOT NULL DEFAULT 0,
+  `B11` float NOT NULL DEFAULT 0,
+  `B13` float NOT NULL DEFAULT 0,
+  `B15` float NOT NULL DEFAULT 0,
+  `N` float NOT NULL DEFAULT 0,
+  `P` float NOT NULL DEFAULT 0,
+  `U` float NOT NULL DEFAULT 0,
+  `Zn` float NOT NULL DEFAULT 0,
+  `Fe` float NOT NULL DEFAULT 0,
+  `Ca` float NOT NULL DEFAULT 0,
+  `Mg` float NOT NULL DEFAULT 0,
+  `Cu` float NOT NULL DEFAULT 0,
+  `Mn` float NOT NULL DEFAULT 0,
+  `Cr` float NOT NULL DEFAULT 0,
+  `Se` float NOT NULL DEFAULT 0,
+  `I` float NOT NULL DEFAULT 0,
+  `Mo` float NOT NULL DEFAULT 0,
+  `K` float NOT NULL DEFAULT 0,
+  `Na` float NOT NULL DEFAULT 0,
+  `F` float NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `fruits`
+--
+
+INSERT INTO `fruits` (`id`, `vis`, `del`, `img`, `name`, `fat`, `protein`, `carbohydrates`, `water`, `A1`, `bCarotene`, `aCarotene`, `B1`, `B2`, `B3`, `B5`, `B6`, `B7`, `B9`, `B12`, `C`, `D1`, `D2`, `D3`, `D4`, `D5`, `E`, `K1`, `K2`, `B4`, `B8`, `B10`, `B11`, `B13`, `B15`, `N`, `P`, `U`, `Zn`, `Fe`, `Ca`, `Mg`, `Cu`, `Mn`, `Cr`, `Se`, `I`, `Mo`, `K`, `Na`, `F`) VALUES
+(1, 1, 0, 'https://dl.airtable.com/.attachmentThumbnails/c6100fdda0169dd650a9a95e03945cc2/0298c6be', 'Apricot', 390, 1400, 11120, 86320, 0.096, 1.094, 0.019, 0, 0, 0.6, 0.2, 0.1, 0, 0.009, 0, 10, 0, 0, 0, 0, 0, 0.9, 0.0033, 0, 2.8, 0, 0, 0, 0, 0, 0, 23, 0, 0.2, 0.4, 13, 10, 0.1, 0.1, 0, 0.001, 0, 0, 259, 1, 0),
+(2, 1, 0, 'https://dl.airtable.com/.attachmentThumbnails/5e8dc309ea2897bdde2d531c4eceb00e/0410f703', 'Orange', 120, 940, 11750, 86750, 0.011, 0.071, 0.011, 0.1, 0, 0.3, 0.3, 0.1, 0, 0.03, 0, 53.2, 0, 0, 0, 0, 0, 0.2, 0, 0, 8.4, 0, 0, 0, 0, 0, 0, 14, 0, 0.1, 0.1, 40, 10, 0, 0, 0, 0.0005, 0, 0, 181, 0, 0),
+(3, 1, 0, 'https://dl.airtable.com/.attachmentThumbnails/5edb20555dc21f559bb23595d864fd41/9946efb5', 'Banana', 330, 1090, 22840, 74910, 0.003, 0.026, 0.025, 0, 0.1, 0.7, 0.3, 0.4, 0, 0.02, 0, 8.7, 0, 0, 0, 0, 0, 0.1, 0.0005, 0, 9.8, 0, 0, 0, 0, 0, 0, 22, 0, 0.2, 0.3, 5, 27, 0.1, 0.3, 0, 0.001, 0, 0, 358, 1, 0),
+(4, 1, 0, 'https://dl.airtable.com/.attachmentThumbnails/57a14719a13dd57f76ec6bf8dc98851e/9ecf4d1b', 'Apple', 170, 260, 13810, 85560, 0.003, 0.027, 0, 0, 0, 0.1, 0.1, 0, 0, 0.003, 0, 4.6, 0, 0, 0, 0, 0, 0.2, 0.0022, 0, 3.4, 0, 0, 0, 0, 0, 0, 11, 0, 0, 0.1, 6, 5, 0, 0, 0, 0, 0, 0, 107, 1, 0.0033),
+(5, 1, 0, 'https://dl.airtable.com/.attachmentThumbnails/5966655102c49125cb327eb0925f0b5b/4f8e1dc3', 'Lemon', 300, 1100, 9320, 88980, 0.001, 0.003, 0.001, 0, 0, 0.1, 0.2, 0.1, 0, 0.011, 0, 53, 0, 0, 0, 0, 0, 0.2, 0, 0, 5.1, 0, 0, 0, 0, 0, 0, 16, 0, 0.1, 0.6, 26, 8, 0, 0, 0, 0.0004, 0, 0, 138, 2, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `grains`
+--
+
+CREATE TABLE `grains` (
+  `id` int(30) NOT NULL,
+  `vis` int(1) NOT NULL DEFAULT 1,
+  `del` int(1) NOT NULL DEFAULT 0,
+  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fat` float NOT NULL DEFAULT 0,
+  `protein` float NOT NULL DEFAULT 0,
+  `carbohydrates` float NOT NULL DEFAULT 0,
+  `water` float NOT NULL DEFAULT 0,
+  `A1` float NOT NULL DEFAULT 0,
+  `bCarotene` float NOT NULL DEFAULT 0,
+  `aCarotene` float NOT NULL DEFAULT 0,
+  `B1` float NOT NULL DEFAULT 0,
+  `B2` float NOT NULL DEFAULT 0,
+  `B3` float NOT NULL DEFAULT 0,
+  `B5` float NOT NULL DEFAULT 0,
+  `B6` float NOT NULL DEFAULT 0,
+  `B7` float NOT NULL DEFAULT 0,
+  `B9` float NOT NULL DEFAULT 0,
+  `B12` float NOT NULL DEFAULT 0,
+  `C` float NOT NULL DEFAULT 0,
+  `D1` float NOT NULL DEFAULT 0,
+  `D2` float NOT NULL DEFAULT 0,
+  `D3` float NOT NULL DEFAULT 0,
+  `D4` float NOT NULL DEFAULT 0,
+  `D5` float NOT NULL DEFAULT 0,
+  `E` float NOT NULL DEFAULT 0,
+  `K1` float NOT NULL DEFAULT 0,
+  `K2` float NOT NULL DEFAULT 0,
+  `B4` float NOT NULL DEFAULT 0,
+  `B8` float NOT NULL DEFAULT 0,
+  `B10` float NOT NULL DEFAULT 0,
+  `B11` float NOT NULL DEFAULT 0,
+  `B13` float NOT NULL DEFAULT 0,
+  `B15` float NOT NULL DEFAULT 0,
+  `N` float NOT NULL DEFAULT 0,
+  `P` float NOT NULL DEFAULT 0,
+  `U` float NOT NULL DEFAULT 0,
+  `Zn` float NOT NULL DEFAULT 0,
+  `Fe` float NOT NULL DEFAULT 0,
+  `Ca` float NOT NULL DEFAULT 0,
+  `Mg` float NOT NULL DEFAULT 0,
+  `Cu` float NOT NULL DEFAULT 0,
+  `Mn` float NOT NULL DEFAULT 0,
+  `Cr` float NOT NULL DEFAULT 0,
+  `Se` float NOT NULL DEFAULT 0,
+  `I` float NOT NULL DEFAULT 0,
+  `Mo` float NOT NULL DEFAULT 0,
+  `K` float NOT NULL DEFAULT 0,
+  `Na` float NOT NULL DEFAULT 0,
+  `F` float NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `mainpagecells`
 --
 
@@ -84,6 +635,74 @@ INSERT INTO `mainpagecells` (`id`, `vis`, `del`, `header`, `img`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Структура таблицы `meat`
+--
+
+CREATE TABLE `meat` (
+  `id` int(30) NOT NULL,
+  `vis` int(1) NOT NULL DEFAULT 1,
+  `del` int(1) NOT NULL DEFAULT 0,
+  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fat` float NOT NULL DEFAULT 0,
+  `protein` float NOT NULL DEFAULT 0,
+  `carbohydrates` float NOT NULL DEFAULT 0,
+  `water` float NOT NULL DEFAULT 0,
+  `A1` float NOT NULL DEFAULT 0,
+  `bCarotene` float NOT NULL DEFAULT 0,
+  `aCarotene` float NOT NULL DEFAULT 0,
+  `B1` float NOT NULL DEFAULT 0,
+  `B2` float NOT NULL DEFAULT 0,
+  `B3` float NOT NULL DEFAULT 0,
+  `B5` float NOT NULL DEFAULT 0,
+  `B6` float NOT NULL DEFAULT 0,
+  `B7` float NOT NULL DEFAULT 0,
+  `B9` float NOT NULL DEFAULT 0,
+  `B12` float NOT NULL DEFAULT 0,
+  `C` float NOT NULL DEFAULT 0,
+  `D1` float NOT NULL DEFAULT 0,
+  `D2` float NOT NULL DEFAULT 0,
+  `D3` float NOT NULL DEFAULT 0,
+  `D4` float NOT NULL DEFAULT 0,
+  `D5` float NOT NULL DEFAULT 0,
+  `E` float NOT NULL DEFAULT 0,
+  `K1` float NOT NULL DEFAULT 0,
+  `K2` float NOT NULL DEFAULT 0,
+  `B4` float NOT NULL DEFAULT 0,
+  `B8` float NOT NULL DEFAULT 0,
+  `B10` float NOT NULL DEFAULT 0,
+  `B11` float NOT NULL DEFAULT 0,
+  `B13` float NOT NULL DEFAULT 0,
+  `B15` float NOT NULL DEFAULT 0,
+  `N` float NOT NULL DEFAULT 0,
+  `P` float NOT NULL DEFAULT 0,
+  `U` float NOT NULL DEFAULT 0,
+  `Zn` float NOT NULL DEFAULT 0,
+  `Fe` float NOT NULL DEFAULT 0,
+  `Ca` float NOT NULL DEFAULT 0,
+  `Mg` float NOT NULL DEFAULT 0,
+  `Cu` float NOT NULL DEFAULT 0,
+  `Mn` float NOT NULL DEFAULT 0,
+  `Cr` float NOT NULL DEFAULT 0,
+  `Se` float NOT NULL DEFAULT 0,
+  `I` float NOT NULL DEFAULT 0,
+  `Mo` float NOT NULL DEFAULT 0,
+  `K` float NOT NULL DEFAULT 0,
+  `Na` float NOT NULL DEFAULT 0,
+  `F` float NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Дамп данных таблицы `meat`
+--
+
+INSERT INTO `meat` (`id`, `vis`, `del`, `img`, `name`, `fat`, `protein`, `carbohydrates`, `water`, `A1`, `bCarotene`, `aCarotene`, `B1`, `B2`, `B3`, `B5`, `B6`, `B7`, `B9`, `B12`, `C`, `D1`, `D2`, `D3`, `D4`, `D5`, `E`, `K1`, `K2`, `B4`, `B8`, `B10`, `B11`, `B13`, `B15`, `N`, `P`, `U`, `Zn`, `Fe`, `Ca`, `Mg`, `Cu`, `Mn`, `Cr`, `Se`, `I`, `Mo`, `K`, `Na`, `F`) VALUES
+(1, 1, 0, 'https://dl.airtable.com/.attachmentThumbnails/25bb12ce0291d43cf1279d2f25086bd6/17e0a11e', 'Beef', 4990, 22030, 50, 0, 0.002, 0, 0, 0.1, 0.2, 5.6, 0.6, 0.6, 0, 0.005, 0.0023, 0, 0.0001, 0, 0.0001, 0, 0, 0.2, 0.0014, 0, 65.7, 0, 0, 0, 0, 0, 0, 205, 0, 5.1, 2.1, 12, 19, 0.1, 0, 0, 0.0254, 0, 0, 330, 63, 0),
+(2, 1, 0, 'https://dl.airtable.com/.attachmentThumbnails/48a4c9377c7722715af6a9d33b56cad6/2b9d482f', 'Pork', 6940, 21550, 0, 0, 0.001, 0, 0, 0.7, 0.2, 8, 0.7, 0.7, 0, 0, 0.0005, 0, 0.0004, 0, 0.0004, 0, 0, 0.1, 0, 0, 57.8, 0, 0, 0, 0, 0, 0, 226, 0, 1.6, 0.5, 7, 26, 0.1, 0, 0, 0.0331, 0, 0, 373, 48, 0);
+
+-- --------------------------------------------------------
+
+--
 -- Структура таблицы `navigation`
 --
 
@@ -100,8 +719,187 @@ CREATE TABLE `navigation` (
 
 INSERT INTO `navigation` (`id`, `vis`, `del`, `name`) VALUES
 (1, 1, 0, 'Home'),
-(2, 1, 0, 'About'),
-(3, 1, 0, 'Registration');
+(2, 1, 0, 'About');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `nuts`
+--
+
+CREATE TABLE `nuts` (
+  `id` int(30) NOT NULL,
+  `vis` int(1) NOT NULL DEFAULT 1,
+  `del` int(1) NOT NULL DEFAULT 0,
+  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fat` float NOT NULL DEFAULT 0,
+  `protein` float NOT NULL DEFAULT 0,
+  `carbohydrates` float NOT NULL DEFAULT 0,
+  `water` float NOT NULL DEFAULT 0,
+  `A1` float NOT NULL DEFAULT 0,
+  `bCarotene` float NOT NULL DEFAULT 0,
+  `aCarotene` float NOT NULL DEFAULT 0,
+  `B1` float NOT NULL DEFAULT 0,
+  `B2` float NOT NULL DEFAULT 0,
+  `B3` float NOT NULL DEFAULT 0,
+  `B5` float NOT NULL DEFAULT 0,
+  `B6` float NOT NULL DEFAULT 0,
+  `B7` float NOT NULL DEFAULT 0,
+  `B9` float NOT NULL DEFAULT 0,
+  `B12` float NOT NULL DEFAULT 0,
+  `C` float NOT NULL DEFAULT 0,
+  `D1` float NOT NULL DEFAULT 0,
+  `D2` float NOT NULL DEFAULT 0,
+  `D3` float NOT NULL DEFAULT 0,
+  `D4` float NOT NULL DEFAULT 0,
+  `D5` float NOT NULL DEFAULT 0,
+  `E` float NOT NULL DEFAULT 0,
+  `K1` float NOT NULL DEFAULT 0,
+  `K2` float NOT NULL DEFAULT 0,
+  `B4` float NOT NULL DEFAULT 0,
+  `B8` float NOT NULL DEFAULT 0,
+  `B10` float NOT NULL DEFAULT 0,
+  `B11` float NOT NULL DEFAULT 0,
+  `B13` float NOT NULL DEFAULT 0,
+  `B15` float NOT NULL DEFAULT 0,
+  `N` float NOT NULL DEFAULT 0,
+  `P` float NOT NULL DEFAULT 0,
+  `U` float NOT NULL DEFAULT 0,
+  `Zn` float NOT NULL DEFAULT 0,
+  `Fe` float NOT NULL DEFAULT 0,
+  `Ca` float NOT NULL DEFAULT 0,
+  `Mg` float NOT NULL DEFAULT 0,
+  `Cu` float NOT NULL DEFAULT 0,
+  `Mn` float NOT NULL DEFAULT 0,
+  `Cr` float NOT NULL DEFAULT 0,
+  `Se` float NOT NULL DEFAULT 0,
+  `I` float NOT NULL DEFAULT 0,
+  `Mo` float NOT NULL DEFAULT 0,
+  `K` float NOT NULL DEFAULT 0,
+  `Na` float NOT NULL DEFAULT 0,
+  `F` float NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `poultry`
+--
+
+CREATE TABLE `poultry` (
+  `id` int(30) NOT NULL,
+  `vis` int(1) NOT NULL DEFAULT 1,
+  `del` int(1) NOT NULL DEFAULT 0,
+  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fat` float NOT NULL DEFAULT 0,
+  `protein` float NOT NULL DEFAULT 0,
+  `carbohydrates` float NOT NULL DEFAULT 0,
+  `water` float NOT NULL DEFAULT 0,
+  `A1` float NOT NULL DEFAULT 0,
+  `bCarotene` float NOT NULL DEFAULT 0,
+  `aCarotene` float NOT NULL DEFAULT 0,
+  `B1` float NOT NULL DEFAULT 0,
+  `B2` float NOT NULL DEFAULT 0,
+  `B3` float NOT NULL DEFAULT 0,
+  `B5` float NOT NULL DEFAULT 0,
+  `B6` float NOT NULL DEFAULT 0,
+  `B7` float NOT NULL DEFAULT 0,
+  `B9` float NOT NULL DEFAULT 0,
+  `B12` float NOT NULL DEFAULT 0,
+  `C` float NOT NULL DEFAULT 0,
+  `D1` float NOT NULL DEFAULT 0,
+  `D2` float NOT NULL DEFAULT 0,
+  `D3` float NOT NULL DEFAULT 0,
+  `D4` float NOT NULL DEFAULT 0,
+  `D5` float NOT NULL DEFAULT 0,
+  `E` float NOT NULL DEFAULT 0,
+  `K1` float NOT NULL DEFAULT 0,
+  `K2` float NOT NULL DEFAULT 0,
+  `B4` float NOT NULL DEFAULT 0,
+  `B8` float NOT NULL DEFAULT 0,
+  `B10` float NOT NULL DEFAULT 0,
+  `B11` float NOT NULL DEFAULT 0,
+  `B13` float NOT NULL DEFAULT 0,
+  `B15` float NOT NULL DEFAULT 0,
+  `N` float NOT NULL DEFAULT 0,
+  `P` float NOT NULL DEFAULT 0,
+  `U` float NOT NULL DEFAULT 0,
+  `Zn` float NOT NULL DEFAULT 0,
+  `Fe` float NOT NULL DEFAULT 0,
+  `Ca` float NOT NULL DEFAULT 0,
+  `Mg` float NOT NULL DEFAULT 0,
+  `Cu` float NOT NULL DEFAULT 0,
+  `Mn` float NOT NULL DEFAULT 0,
+  `Cr` float NOT NULL DEFAULT 0,
+  `Se` float NOT NULL DEFAULT 0,
+  `I` float NOT NULL DEFAULT 0,
+  `Mo` float NOT NULL DEFAULT 0,
+  `K` float NOT NULL DEFAULT 0,
+  `Na` float NOT NULL DEFAULT 0,
+  `F` float NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `seafood`
+--
+
+CREATE TABLE `seafood` (
+  `id` int(30) NOT NULL,
+  `vis` int(1) NOT NULL DEFAULT 1,
+  `del` int(1) NOT NULL DEFAULT 0,
+  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fat` float NOT NULL DEFAULT 0,
+  `protein` float NOT NULL DEFAULT 0,
+  `carbohydrates` float NOT NULL DEFAULT 0,
+  `water` float NOT NULL DEFAULT 0,
+  `A1` float NOT NULL DEFAULT 0,
+  `bCarotene` float NOT NULL DEFAULT 0,
+  `aCarotene` float NOT NULL DEFAULT 0,
+  `B1` float NOT NULL DEFAULT 0,
+  `B2` float NOT NULL DEFAULT 0,
+  `B3` float NOT NULL DEFAULT 0,
+  `B5` float NOT NULL DEFAULT 0,
+  `B6` float NOT NULL DEFAULT 0,
+  `B7` float NOT NULL DEFAULT 0,
+  `B9` float NOT NULL DEFAULT 0,
+  `B12` float NOT NULL DEFAULT 0,
+  `C` float NOT NULL DEFAULT 0,
+  `D1` float NOT NULL DEFAULT 0,
+  `D2` float NOT NULL DEFAULT 0,
+  `D3` float NOT NULL DEFAULT 0,
+  `D4` float NOT NULL DEFAULT 0,
+  `D5` float NOT NULL DEFAULT 0,
+  `E` float NOT NULL DEFAULT 0,
+  `K1` float NOT NULL DEFAULT 0,
+  `K2` float NOT NULL DEFAULT 0,
+  `B4` float NOT NULL DEFAULT 0,
+  `B8` float NOT NULL DEFAULT 0,
+  `B10` float NOT NULL DEFAULT 0,
+  `B11` float NOT NULL DEFAULT 0,
+  `B13` float NOT NULL DEFAULT 0,
+  `B15` float NOT NULL DEFAULT 0,
+  `N` float NOT NULL DEFAULT 0,
+  `P` float NOT NULL DEFAULT 0,
+  `U` float NOT NULL DEFAULT 0,
+  `Zn` float NOT NULL DEFAULT 0,
+  `Fe` float NOT NULL DEFAULT 0,
+  `Ca` float NOT NULL DEFAULT 0,
+  `Mg` float NOT NULL DEFAULT 0,
+  `Cu` float NOT NULL DEFAULT 0,
+  `Mn` float NOT NULL DEFAULT 0,
+  `Cr` float NOT NULL DEFAULT 0,
+  `Se` float NOT NULL DEFAULT 0,
+  `I` float NOT NULL DEFAULT 0,
+  `Mo` float NOT NULL DEFAULT 0,
+  `K` float NOT NULL DEFAULT 0,
+  `Na` float NOT NULL DEFAULT 0,
+  `F` float NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -114,6 +912,66 @@ CREATE TABLE `settings` (
   `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `val` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
   `hdr` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `sweets`
+--
+
+CREATE TABLE `sweets` (
+  `id` int(30) NOT NULL,
+  `vis` int(1) NOT NULL DEFAULT 1,
+  `del` int(1) NOT NULL DEFAULT 0,
+  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fat` float NOT NULL DEFAULT 0,
+  `protein` float NOT NULL DEFAULT 0,
+  `carbohydrates` float NOT NULL DEFAULT 0,
+  `water` float NOT NULL DEFAULT 0,
+  `A1` float NOT NULL DEFAULT 0,
+  `bCarotene` float NOT NULL DEFAULT 0,
+  `aCarotene` float NOT NULL DEFAULT 0,
+  `B1` float NOT NULL DEFAULT 0,
+  `B2` float NOT NULL DEFAULT 0,
+  `B3` float NOT NULL DEFAULT 0,
+  `B5` float NOT NULL DEFAULT 0,
+  `B6` float NOT NULL DEFAULT 0,
+  `B7` float NOT NULL DEFAULT 0,
+  `B9` float NOT NULL DEFAULT 0,
+  `B12` float NOT NULL DEFAULT 0,
+  `C` float NOT NULL DEFAULT 0,
+  `D1` float NOT NULL DEFAULT 0,
+  `D2` float NOT NULL DEFAULT 0,
+  `D3` float NOT NULL DEFAULT 0,
+  `D4` float NOT NULL DEFAULT 0,
+  `D5` float NOT NULL DEFAULT 0,
+  `E` float NOT NULL DEFAULT 0,
+  `K1` float NOT NULL DEFAULT 0,
+  `K2` float NOT NULL DEFAULT 0,
+  `B4` float NOT NULL DEFAULT 0,
+  `B8` float NOT NULL DEFAULT 0,
+  `B10` float NOT NULL DEFAULT 0,
+  `B11` float NOT NULL DEFAULT 0,
+  `B13` float NOT NULL DEFAULT 0,
+  `B15` float NOT NULL DEFAULT 0,
+  `N` float NOT NULL DEFAULT 0,
+  `P` float NOT NULL DEFAULT 0,
+  `U` float NOT NULL DEFAULT 0,
+  `Zn` float NOT NULL DEFAULT 0,
+  `Fe` float NOT NULL DEFAULT 0,
+  `Ca` float NOT NULL DEFAULT 0,
+  `Mg` float NOT NULL DEFAULT 0,
+  `Cu` float NOT NULL DEFAULT 0,
+  `Mn` float NOT NULL DEFAULT 0,
+  `Cr` float NOT NULL DEFAULT 0,
+  `Se` float NOT NULL DEFAULT 0,
+  `I` float NOT NULL DEFAULT 0,
+  `Mo` float NOT NULL DEFAULT 0,
+  `K` float NOT NULL DEFAULT 0,
+  `Na` float NOT NULL DEFAULT 0,
+  `F` float NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
@@ -132,6 +990,66 @@ CREATE TABLE `users` (
   `date` date NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `vegetables`
+--
+
+CREATE TABLE `vegetables` (
+  `id` int(30) NOT NULL,
+  `vis` int(1) NOT NULL DEFAULT 1,
+  `del` int(1) NOT NULL DEFAULT 0,
+  `img` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(100) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `fat` float NOT NULL DEFAULT 0,
+  `protein` float NOT NULL DEFAULT 0,
+  `carbohydrates` float NOT NULL DEFAULT 0,
+  `water` float NOT NULL DEFAULT 0,
+  `A1` float NOT NULL DEFAULT 0,
+  `bCarotene` float NOT NULL DEFAULT 0,
+  `aCarotene` float NOT NULL DEFAULT 0,
+  `B1` float NOT NULL DEFAULT 0,
+  `B2` float NOT NULL DEFAULT 0,
+  `B3` float NOT NULL DEFAULT 0,
+  `B5` float NOT NULL DEFAULT 0,
+  `B6` float NOT NULL DEFAULT 0,
+  `B7` float NOT NULL DEFAULT 0,
+  `B9` float NOT NULL DEFAULT 0,
+  `B12` float NOT NULL DEFAULT 0,
+  `C` float NOT NULL DEFAULT 0,
+  `D1` float NOT NULL DEFAULT 0,
+  `D2` float NOT NULL DEFAULT 0,
+  `D3` float NOT NULL DEFAULT 0,
+  `D4` float NOT NULL DEFAULT 0,
+  `D5` float NOT NULL DEFAULT 0,
+  `E` float NOT NULL DEFAULT 0,
+  `K1` float NOT NULL DEFAULT 0,
+  `K2` float NOT NULL DEFAULT 0,
+  `B4` float NOT NULL DEFAULT 0,
+  `B8` float NOT NULL DEFAULT 0,
+  `B10` float NOT NULL DEFAULT 0,
+  `B11` float NOT NULL DEFAULT 0,
+  `B13` float NOT NULL DEFAULT 0,
+  `B15` float NOT NULL DEFAULT 0,
+  `N` float NOT NULL DEFAULT 0,
+  `P` float NOT NULL DEFAULT 0,
+  `U` float NOT NULL DEFAULT 0,
+  `Zn` float NOT NULL DEFAULT 0,
+  `Fe` float NOT NULL DEFAULT 0,
+  `Ca` float NOT NULL DEFAULT 0,
+  `Mg` float NOT NULL DEFAULT 0,
+  `Cu` float NOT NULL DEFAULT 0,
+  `Mn` float NOT NULL DEFAULT 0,
+  `Cr` float NOT NULL DEFAULT 0,
+  `Se` float NOT NULL DEFAULT 0,
+  `I` float NOT NULL DEFAULT 0,
+  `Mo` float NOT NULL DEFAULT 0,
+  `K` float NOT NULL DEFAULT 0,
+  `Na` float NOT NULL DEFAULT 0,
+  `F` float NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
 --
 -- Индексы сохранённых таблиц
 --
@@ -143,9 +1061,69 @@ ALTER TABLE `about`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `alcohol`
+--
+ALTER TABLE `alcohol`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `bakery`
+--
+ALTER TABLE `bakery`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `beans`
+--
+ALTER TABLE `beans`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `beverages`
+--
+ALTER TABLE `beverages`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `complex`
+--
+ALTER TABLE `complex`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `dairy`
+--
+ALTER TABLE `dairy`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `fish`
+--
+ALTER TABLE `fish`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `fruits`
+--
+ALTER TABLE `fruits`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `grains`
+--
+ALTER TABLE `grains`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `mainpagecells`
 --
 ALTER TABLE `mainpagecells`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `meat`
+--
+ALTER TABLE `meat`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -155,15 +1133,45 @@ ALTER TABLE `navigation`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `nuts`
+--
+ALTER TABLE `nuts`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `poultry`
+--
+ALTER TABLE `poultry`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `seafood`
+--
+ALTER TABLE `seafood`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `settings`
 --
 ALTER TABLE `settings`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Индексы таблицы `sweets`
+--
+ALTER TABLE `sweets`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `users`
 --
 ALTER TABLE `users`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Индексы таблицы `vegetables`
+--
+ALTER TABLE `vegetables`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -177,10 +1185,70 @@ ALTER TABLE `about`
   MODIFY `id` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
+-- AUTO_INCREMENT для таблицы `alcohol`
+--
+ALTER TABLE `alcohol`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `bakery`
+--
+ALTER TABLE `bakery`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `beans`
+--
+ALTER TABLE `beans`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `beverages`
+--
+ALTER TABLE `beverages`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `complex`
+--
+ALTER TABLE `complex`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `dairy`
+--
+ALTER TABLE `dairy`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `fish`
+--
+ALTER TABLE `fish`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `fruits`
+--
+ALTER TABLE `fruits`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
+-- AUTO_INCREMENT для таблицы `grains`
+--
+ALTER TABLE `grains`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT для таблицы `mainpagecells`
 --
 ALTER TABLE `mainpagecells`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+
+--
+-- AUTO_INCREMENT для таблицы `meat`
+--
+ALTER TABLE `meat`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT для таблицы `navigation`
@@ -189,16 +1257,46 @@ ALTER TABLE `navigation`
   MODIFY `id` int(6) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
+-- AUTO_INCREMENT для таблицы `nuts`
+--
+ALTER TABLE `nuts`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `poultry`
+--
+ALTER TABLE `poultry`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `seafood`
+--
+ALTER TABLE `seafood`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT для таблицы `settings`
 --
 ALTER TABLE `settings`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT для таблицы `sweets`
+--
+ALTER TABLE `sweets`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT для таблицы `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(20) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT для таблицы `vegetables`
+--
+ALTER TABLE `vegetables`
+  MODIFY `id` int(30) NOT NULL AUTO_INCREMENT;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

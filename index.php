@@ -12,5 +12,6 @@ include_once("inc/baseModel.php");
 include_once("inc/navbar.php");
 include_once("inc/users.php");
 include_once("inc/content.php");
+include_once("inc/cells.php");
 
 new core;
