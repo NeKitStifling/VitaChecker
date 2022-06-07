@@ -9,6 +9,7 @@ $(document).ready(function(){
             $(".navbar").append($("<li class = 'nav-item'><a href='#' id = 'item"+dd[i][0]+"' class='nav-link active navStr"+dd[i][1]+"' aria-current='page' rel = \""+dd[i][0]+"\">"+dd[i][1]+"</a></li>"))
         };
         homeCont();
+        globalTableCont();
 
         $('.navStrHome').click(function(){
             cont(dd[0][0]);
@@ -119,6 +120,7 @@ function postCellType($type){
 
 function cellsContent(ddata){
     dd = jQuery.parseJSON(ddata);
+    $dd = jQuery.parseJSON(ddata);
     for(i = 0; i<dd.length; i++)
     {
         $(".content").append($("<div class='typeOption"+dd[i][0]+" typeOption' id='typeOption"+dd[i][0]+"'></div><hr>"));
@@ -126,6 +128,7 @@ function cellsContent(ddata){
         $(".typeOption"+dd[i][0]).append($("<div class='chosenType chosenType"+dd[i][0]+"' id='chosenType"+dd[i][0]+"'></div>"));
         vitaDraw();
     }
+    globalTable();
     selection();
 }
 
@@ -141,16 +144,53 @@ function selection(){
     });
 }
 
+
 function vitaDraw(){
-    $(".chosenType"+dd[i][0]).append($("<input type='number' id='inputGrams"+dd[i][0]+"' min='0' max='3000' value='100'><button class='inputBtn'>Input</button><label> : Number of grams consumed</label><table class='chosenTable"+dd[i][0]+"'><thead><tr><td>Name</td><td>Value in grams</td></tr></thead><tbody class='chosenTableBody"+dd[i][0]+"'></tbody></table>"));
 
-    grValue = document.getElementById('inputGrams'+dd[i][0]).value / 100;
-
-    for(j = 0; j<optionNames.length; j++)
-    {
-        $(".chosenTableBody"+dd[i][0]).append($("<tr><td>"+optionNames[j]+"</td><td>"+(dd[i][j+3]*grValue)+"</td><td>"+toPercent((dd[i][j+3]*grValue)/dailyNorm[j])+"</td></tr>"));
-    };
+    $(".chosenType"+dd[i][0]).append($("<hr class='subline'><input type='number' class='inputNumberHint' id='inputGrams"+dd[i][0]+"' min='0' value='' title='Insert number of grams consumed and press Enter'><label> : Amount of grams consumed</label><br><button class='inputGramsBtn' id='inputGramsBtn'"+dd[i][0]+">Input</button><label style='font-style: italic'>Press the button to send data to a global table</label><hr><table class='chosenTable"+dd[i][0]+"'><thead><tr><td>Name   </td><td>Value in milligrams   </td><td>Normal daily percentage consumption   </td></tr></thead><tbody class='tableBody"+dd[i][0]+"'></tbody></table>"));
+    $("#inputGrams"+dd[i][0]).change(function(){
+        dd = $dd;
+        // alert($(this).val());
+        memid = $(this).attr("id");
+        target = (memid.charAt(memid.length - 1));
+        grValue = $(this).val() / 100;
+        $(".tableBody"+target).html('');
+        for(j = 0; j<optionNames.length; j++)
+        {
+            $(".tableBody"+target).append($("<tr><td>"+optionNames[j]+"</td><td>"+(dd[target-1][j+3]*grValue).toFixed(1)+"</td><td>"+toPercent((dd[target-1][j+3]*grValue)/dailyNorm[j])+"</td></tr>"));
+            $tt[j] = dd[target-1][j+3]*grValue;
+        };
+    });
 }
+
+function globalTable(){
+    $(".inputGramsBtn").click(function(){
+        // alert($tt);
+        $(".globalTableBody").html('');
+        for(j = 0; j<optionNames.length; j++)
+        {
+            if($globRes.length < 43){
+                temp = 0;
+            } else {
+                temp = $globRes[j];
+            }
+            $globRes[j] = $tt[j] + temp;
+            $(".globalTableBody").append($("<tr><td>"+optionNames[j]+"</td><td>"+($globRes[j]).toFixed(1)+"</td><td>"+toPercent($globRes[j]/dailyNorm[j])+"</td></tr>"));
+        }
+        $(".globalTableBody").append('<button class="globalTableClear">Clear</button>')
+        $(".globalTableClear").click(function(){
+            for(j = 0; j<optionNames.length; j++)
+            {
+                $globRes[j] = 0;
+            }
+            $(".globalTableBody").html('');
+            // alert($globRes);
+        });
+    });
+}
+
+const $tt = [];
+const $globRes = [];
 
 const optionNames = ['Fat','Protein','Carbohydrates','Water','A1','bCarotene','aCarotene','B1','B2','B3','B4','B5','B6','B7','B8',
                         'B9','B10','B11','B12','B13','B15','C','D1','D2','D3','E','K1','K2','N','P','Zn','Fe','Ca','Mg','Cu','Mn','Cr','Se','I','Mo','K','Na','F'];
@@ -162,4 +202,8 @@ function toPercent(point){
     var percent = Number(point*100).toFixed(1);
     percent+="%";
     return percent;
+}
+
+function globalTableCont(){
+    $(".tableBox").append($("<table class='globalTable'><thead><tr><td>Name   </td><td>Value in milligrams   </td><td>Normal daily percentage consumption   </td></tr></thead><tbody class='globalTableBody'></tbody></table>"))
 }

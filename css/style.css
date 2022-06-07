@@ -20,9 +20,10 @@
 
     .content{
         width:500px;
-        height:500px;
+        height:auto;
         display: table;
         position: relative;
+        float: left;
     }
 
     .mainCell{
@@ -85,4 +86,17 @@
 
     a{
         text-decoration: none;
+    }
+
+    .subline{
+        border:1px solid #86C232;
+    }
+
+/* table{
+    overflow: scroll;
+    height: 300px;
+} */
+
+    .tableBox{
+        width: auto;
     }
