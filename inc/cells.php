@@ -1,4 +1,5 @@
 <?php
+
 class cellMeat extends baseModel
 {
 	protected static $tblname = "meat";

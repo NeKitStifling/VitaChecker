@@ -5,19 +5,19 @@ abstract class baseModel
 	static private $dbcon;
 	static private $resource;
 
-
+	// Постройка модели
 	function __construct($con)
 	{
 		$this->dbcon= $con;
 	}
 
-
+	// Получение списка
 	function getlist(){
 		$qwry=$this->dbcon->query("select `id` from `".static::$tblname."` where  `del`=0");
 		return $qwry->fetchAll();
 	}
 
-
+	// Получение SQL списка
 	function getlistBySql($SQL,$values,$params=[])
 	{
 
@@ -33,6 +33,7 @@ abstract class baseModel
 
 	}
 
+	// Получение списка по параметру
 	function getlistBy($values,$params=[])
 	{
 
@@ -78,7 +79,7 @@ abstract class baseModel
 	}
 
 
-
+	// Функция выбор
 	function select($itemid)
 	{
 		$qwry=$this->dbcon->prepare("select * from `".static::$tblname."` where `id`=? and `del`=0");
@@ -92,7 +93,7 @@ abstract class baseModel
 		return 0;
 	}
 
-
+	// Выбор по параметру
 	function selectBy($values)
 	{
 

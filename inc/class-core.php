@@ -10,6 +10,7 @@ class core
 	private $hiddenmode;
 	private $title;
 
+	// Сборка кода
 	function __construct()
 	{
 
@@ -29,10 +30,11 @@ class core
 
 	}
 
-
+	// Функция запроса данных из БД
 	function request(){
 		$requesttype = $_POST['request'];
 
+		// Запрос на получение списка страниц для панели навигации
 		if ($requesttype == "getpagelist"){
 			$pageobj = new navbar ($this-> dbcon);
 			$getlist = $pageobj->getlistBy(["vis" => 1]);
@@ -43,6 +45,7 @@ class core
 			}
 			print(json_encode($res));
 		}
+		// Запрос на получение данных о категориях на главной странице
 		elseif($requesttype == "gethomecontent"){
 			$pageobj = new contentHome ($this-> dbcon);
 			$getlist = $pageobj->getlistBy(["vis"=>1]);
@@ -53,6 +56,7 @@ class core
 			}
 			print(json_encode($dat));
 		}
+		// Запрос на получение данных для страницы "about"
 		elseif($requesttype == "getaboutcontent"){
 			$pageobj = new contentAbout ($this-> dbcon);
 			$getlist = $pageobj->getlistBy(["vis"=>1]);
@@ -63,6 +67,7 @@ class core
 			}
 			print(json_encode($dat));
 		}
+		// Получение внтуреннего контента ячеек категорий
 		elseif($requesttype == "getcellcontent"){
 			$cellType = $_POST['celltype'];
 			if ($cellType == "meat"){
@@ -165,6 +170,7 @@ class core
 		}
 	}
 
+	// Подключение к БД
 	function dbconnect(){
 		include("tools/dbCon.php");
 		$dsn = $type.":host=".$host.";dbname=".$base;
@@ -183,6 +189,7 @@ class core
 		}
 	}
 
+	// Построение HTML заготовки
 	function build(){
 		$tmpl = file_get_contents("tmpl/page.html");
 		print ($tmpl);
